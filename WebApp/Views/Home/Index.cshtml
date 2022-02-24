@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+@*<input type="text" id="theToken">*@
+<button onclick="test()">go to payment page</button>
+
+<script>
+
+    // $(document).ready(function(){
+    //     alert(1);
+    // });
+
+    function test() {
+       
+       /* var token = $('#theToken').val().trim();*/
+
+        //$.post("https://dcb.fortumo.com/5bc758e17cae03c55d3179b54fe3b486/?" + token + "", function (data, status) {
+            
+        //  });
+      var ddd =   JSON.stringify({
+            "service_MapId": "3010",
+            "mobile": "01760000000",
+            "channel": "IOS"}
+        )
+        $.ajax({
+            type: "POST",
+            url: "https://fortumo.techapi24.com/api/Subscription/subscription",
+            data: ddd,
+            dataType: 'json',
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+              
+                //console.dir(data);
+                window.location.href = data.data;
+            },
+            error: function (request, status, error) {
+                console.dir(request);
+                console.dir(error);
+            }
+        });
+    }
+</script>

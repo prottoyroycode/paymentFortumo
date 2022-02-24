@@ -1,0 +1,4 @@
+2022-01-25T15:30:20.7091092+06:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2022-01-25T15:30:20.7206615+06:00  [INF] Hosting environment: "Development" (c3307c92)
+2022-01-25T15:30:20.7208725+06:00  [INF] Content root path: "D:\prottoy\payments-fortumo\WebApp" (b5d60022)
+2022-01-25T15:30:20.8770690+06:00 80000082-0000-ff00-b63f-84710c7967bb [WRN] Failed to determine the https port for redirect. (ca76cc21)
